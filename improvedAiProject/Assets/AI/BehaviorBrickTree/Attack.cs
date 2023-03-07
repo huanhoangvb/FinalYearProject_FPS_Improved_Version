@@ -54,7 +54,6 @@ public class Attack : BasePrimitiveAction
             {
                 Vector3 enemyPos = Enemy.transform.position;
                 navAgent.destination = enemyPos;
-                Debug.Log(enemyPos + " " + navAgent.pathStatus);
                 if (Vector3.Distance(enemyPos, companion.position) < 5f)
                 {
                     companion.GetComponent<Animator>().SetBool("Attacking", true);

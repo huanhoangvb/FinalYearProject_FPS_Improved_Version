@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class resource : MonoBehaviour
 {
-    private int bulletsAmount = 30;
-
     public void destroyResource() {
         Destroy(gameObject);
     }
@@ -14,7 +12,7 @@ public class resource : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<GunScript>().bulletsIHave += bulletsAmount;
+            GameObject.FindGameObjectsWithTag("Weapon")[0].GetComponent<GunScript>().bulletsIHave += 30;
             destroyResource();
         }
     }
