@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34a7c8ca992f915438a96c2077353778, type: 3}
+  m_Name: DetectEnemy
+  m_EditorClassIdentifier: 
+  brickName: Assets/DetectEnemy.asset
+  xml: "\uFEFF<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<BehaviorBricks xmlns:ref=\"urn:padaone\"
+    version=\"1.0\">\r\n  <BehaviorTree id=\"0\" />\r\n  <runtimeInfo>\r\n    <BehaviorTree
+    id=\"0\" guid=\"ab24d528806cef3478cfa9c3fbf864ed\" nextId=\"13\">\r\n      <root>\r\n       
+    <SequenceNode id=\"7\" />\r\n      </root>\r\n      <inputParams />\r\n     
+    <outputParams>\r\n        <outputValues>\r\n          <entry name=\"CompanionGameObject\"
+    type=\"UnityEngine.GameObject\" isBlackboard=\"True\" blackboard=\"CompanionGameObject\"
+    />\r\n          <entry name=\"EnemyResourceWithinRange\" type=\"System.Boolean\"
+    isBlackboard=\"True\" />\r\n        </outputValues>\r\n      </outputParams>\r\n     
+    <localParams />\r\n    </BehaviorTree>\r\n    <SequenceNode id=\"7\">\r\n     
+    <children>\r\n        <elem>\r\n          <ActionNode id=\"8\" />\r\n       
+    </elem>\r\n        <elem>\r\n          <ActionNode id=\"9\" />\r\n        </elem>\r\n       
+    <elem>\r\n          <ActionNode id=\"11\" />\r\n        </elem>\r\n      </children>\r\n     
+    <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </SequenceNode>\r\n   
+    <ActionNode id=\"8\" action=\"GameObject/SendMessage\">\r\n      <inputParams>\r\n       
+    <inputValues>\r\n          <entry name=\"methodName\" type=\"System.String\"
+    isBlackboard=\"False\" value=\"CheckAttackable\" />\r\n          <entry name=\"game
+    object\" type=\"UnityEngine.GameObject\" isBlackboard=\"True\" blackboard=\"CompanionGameObject\"
+    />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams />\r\n     
+    <localParams />\r\n    </ActionNode>\r\n    <ActionNode id=\"9\" action=\"Basic/WaitForSeconds\">\r\n     
+    <inputParams>\r\n        <inputValues>\r\n          <entry name=\"seconds\" type=\"System.Single\"
+    isBlackboard=\"False\" value=\"1\" />\r\n        </inputValues>\r\n      </inputParams>\r\n     
+    <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n    <ActionNode
+    id=\"11\" action=\"Basic/SetBool\">\r\n      <inputParams>\r\n        <inputValues>\r\n         
+    <entry name=\"value\" type=\"System.Boolean\" isBlackboard=\"False\" value=\"False\"
+    />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams>\r\n       
+    <outputValues>\r\n          <entry name=\"var\" type=\"System.Boolean\" isBlackboard=\"True\"
+    blackboard=\"EnemyResourceWithinRange\" />\r\n        </outputValues>\r\n     
+    </outputParams>\r\n      <localParams />\r\n    </ActionNode>\r\n  </runtimeInfo>\r\n 
+    <editorInfo>\r\n    <BehaviorTree id=\"0\" _name=\"DetectEnemy\" _description=\"\"
+    _removeIfClosed=\"False\">\r\n      <_rootList>\r\n        <elem>\r\n         
+    <SequenceNode id=\"7\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode
+    id=\"8\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"9\"
+    />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"11\" />\r\n       
+    </elem>\r\n      </_rootList>\r\n      <_nodes>\r\n        <nodes>\r\n         
+    <SequenceNode id=\"7\" />\r\n          <ActionNode id=\"8\" />\r\n          <ActionNode
+    id=\"9\" />\r\n          <ActionNode id=\"11\" />\r\n        </nodes>\r\n     
+    </_nodes>\r\n    </BehaviorTree>\r\n    <SequenceNode id=\"7\">\r\n      <_data>\r\n       
+    <data breakpoint=\"0\" selected=\"False\" position=\"255.5343 183.8889\" name=\"Sequence\"
+    description=\"Executes all its children in sequence until all of them are successful\"
+    cardinality=\"-1\" hasParent=\"False\">\r\n          <BehaviorTree id=\"7\" />\r\n       
+    </data>\r\n      </_data>\r\n    </SequenceNode>\r\n    <ActionNode id=\"8\">\r\n     
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"96.0498
+    373.8891\" name=\"GameObject/SendMessage\" description=\"Calls the method named
+    methodName on every MonoBehaviour in this game object\" cardinality=\"0\" hasParent=\"True\">\r\n         
+    <BehaviorTree id=\"7\" />\r\n          <ActionNode id=\"8\" />\r\n          <SequenceNode
+    id=\"7\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
+    <ActionNode id=\"9\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"True\"
+    position=\"222.9732 361.8572\" name=\"Basic/WaitForSeconds\" description=\"Action
+    that success after a period of time.\" cardinality=\"0\" hasParent=\"True\">\r\n         
+    <BehaviorTree id=\"7\" />\r\n          <ActionNode id=\"9\" />\r\n          <SequenceNode
+    id=\"7\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
+    <ActionNode id=\"11\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"554.2593 362\" name=\"Basic/SetBool\" description=\"Sets a value to
+    a boolean variable\" cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree
+    id=\"7\" />\r\n          <ActionNode id=\"11\" />\r\n          <SequenceNode
+    id=\"7\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n  </editorInfo>\r\n 
+    <runtimeInfo>\r\n    <BehaviorTree id=\"7\" nextId=\"1\">\r\n      <inputParams
+    />\r\n      <outputParams />\r\n      <localParams />\r\n    </BehaviorTree>\r\n 
+    </runtimeInfo>\r\n  <editorInfo>\r\n    <BehaviorTree id=\"7\" _removeIfClosed=\"False\">\r\n     
+    <_rootList />\r\n      <_nodes>\r\n        <nodes />\r\n      </_nodes>\r\n   
+    </BehaviorTree>\r\n  </editorInfo>\r\n</BehaviorBricks>"
+  zoom: 0.8
+  subslist: []
+  _guid: ab24d528806cef3478cfa9c3fbf864ed
