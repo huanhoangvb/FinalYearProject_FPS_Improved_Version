@@ -2,13 +2,13 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
-improvedAiProject/[Ll]ibrary/
-improvedAiProject/[Tt]emp/
-improvedAiProject/[Oo]bj/
+MyTestProject/[Ll]ibrary/
+MyTestProject/[Tt]emp/
+MyTestProject/[Oo]bj/
 # improvedAiProject/[Bb]uild/
 # improvedAiProject/[Bb]uilds/
-improvedAiProject/[Ll]ogs/
-improvedAiProject/[Uu]ser[Ss]ettings/
+MyTestProject/[Ll]ogs/
+MyTestProject/[Uu]ser[Ss]ettings/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
@@ -20,7 +20,7 @@ improvedAiProject/[Uu]ser[Ss]ettings/
 [Aa]ssets/Plugins/Editor/JetBrains*
 
 # Visual Studio cache directory
-.vs/
+MyTestProject/.vs/
 
 # Gradle cache directory
 .gradle/
